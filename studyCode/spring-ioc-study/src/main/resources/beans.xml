@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    使用spring来创建对象，在Spring中这些都称为Bean-->
+    <bean id="daoUser1" class="com.boshen.dao.UserDaoImpl"/>
+    <bean id="daoUser2" class="com.boshen.dao.UserDaoIMPL2"/>
+    <bean id="service" class="com.boshen.service.UserServiceIMPL">
+        <property name="dao" ref="daoUser1"/>
+    </bean>
+
+
+</beans>
